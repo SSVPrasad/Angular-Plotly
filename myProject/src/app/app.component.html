@@ -1,0 +1,64 @@
+
+ <div class="row">
+    <div class="column"><app-child></app-child></div>
+    <div class="column"><app-scroll></app-scroll></div>
+</div>
+
+<div class="row">
+    <div class="column"><app-chinnis-graph></app-chinnis-graph></div>
+    <div class="column"><app-map ></app-map></div>
+</div>
+<div><app-dynamic-plots class="ex"></app-dynamic-plots>
+    <app-time-series-d3></app-time-series-d3></div>
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  Styles -->
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      /* height: 100px; Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      padding: 10px;
+      display: table;
+      clear: both;
+    }
+    
+div{
+   border: 10px;
+}
+
+    </style>

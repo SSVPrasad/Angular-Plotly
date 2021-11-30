@@ -1,0 +1,41 @@
+<p>Graph by Chinni!</p>
+
+<div>
+    <div>
+      <button (click)="zoomClick()">Relayout-Zoom</button>
+    </div>
+    <div>
+      <button (click)="toggleToolbar()">Toolbar-Toggle</button>
+    </div>
+    <plotly-plot
+      [data]="interactivePlotSubject$ | async"
+      [layout]="graph2.layout"
+      [useResizeHandler]="true"
+      [debug]="true"
+      [config]="config"
+      [style]="{ position: 'relative', width: '100%', height: '100%' }"
+      [revision]="revisionCount"
+      divId="graph2Id"
+      [updateOnLayoutChange]="true"
+      [updateOnDataChange]="true"
+      [updateOnlyWithRevision]="true"
+      [useResizeHandler]="true"
+      (clickAnnotation)="onClickAnnotation($event)"
+      (update)="updatedTheGraph()"
+      (initialized)="afterChartInit()"
+      (hover)="hover($event)"
+      (mouseleave)="mouseLeave($event)"
+      (plotlyClick)="onClick($event)"
+    ></plotly-plot>
+    <!-- [frames]="" -->
+  </div>
+  
+  <!--
+  <plotly-plot
+    [data]="graph1.data"
+    [layout]="graph1.layout"
+    [useResizeHandler]="true"
+    [debug]="true"
+    (hover)="hover($event)"
+    (mouseleave)="mouseLeave($event)"
+  ></plotly-plot> -->
